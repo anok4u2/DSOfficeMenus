@@ -1,0 +1,4 @@
+@#! Dialog System Error Message File !#@                                    
+The area code must be one of N,S,E or W                                     
+The credit limit must lie in the range 1000 - 5000                          
+The date must be in valid DD/MM/YY format                                   

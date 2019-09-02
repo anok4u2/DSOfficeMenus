@@ -1,0 +1,74 @@
+   *********************************************************************
+
+                      Micro Focus Dialog System V3.0
+
+                      CUSTOMER Demonstration Program
+
+   *********************************************************************
+
+
+   CUSTOMER Demonstration Program
+   ------------------------------
+
+
+   Overview
+   --------
+
+   This CUSTOMER example program is the same program as supplied with
+   character mode Dialog System. Its purpose is to show how to call
+   a Dialog System Graphical screenset, using the same call interface
+   as used for Character Mode Dialog System. This is to allow easier
+   migration from character mode interfaces to graphical mode interfaces.
+
+   The Dialog System Graphical Mode version of the Character Mode call
+   interface is defined in DS-CNTRL.V1. This file has the same layout
+   as the DS-CNTRL.MF file supplied with Character Mode Dialog System.
+
+   The more advanced graphical call interface is supplied in DS-CNTRL.MF.
+   It is advisable to switch to using this interface, so that the more
+   advanced features in graphical Dialog System may be used, for example,
+   30 character alphanumeric procedure names.
+
+
+   Files Required
+   --------------
+
+   The files needed to build and run the demonstration program are:
+
+   Name of the file     Description of the file
+   ----------------     -----------------------------------------------------
+     CUSTOMER.GS          The CUSTOMER Dialog System screenset.
+
+     CUSTOMER.CBL         The CUSTOMER COBOL program.
+      - ds-cntrl.v1       Dialog System version 1 (Character Mode compatable
+                          call interface) control file.
+
+     CUSTOMER.ERR         Error messages used by the demo.
+
+     CUSTOMER.TXT         This CUSTOMER document.
+
+     CUSTOMER.APP         The CUSTOMER Net Express project file.
+
+     CUSTOMER.CPB         The Dialog System data block copyfile for CUSTOMER.GS
+
+
+   Compiling and Running The Demonstration Program
+   -----------------------------------------------
+
+   In order to run the CUSTOMER demonstration, you need to compile the
+   CUSTOMER.CBL demonstration program.
+
+   Load the supplied Net Express project file and select Rebuild All
+   from the Project menu.
+
+   Run the demonstration by selecting Run from the Animate menu.
+
+
+   Extra Notes
+   -----------
+
+   When you compile a program from within the Net Express IDE, the
+   INT and IDY files may (depending on your project's build type) be
+   placed in a directory below your working directory. When running the
+   demonstration outside of the IDE you must make sure the project build
+   directory is on your COBDIR.

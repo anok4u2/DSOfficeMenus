@@ -1,0 +1,158 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 CUSTOMER-DATA-BLOCK-VERSION-NO     PIC 9(8) COMP-5
+                                             VALUE 4.
+
+       01 CUSTOMER-VERSION-NO                PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 CUSTOMER-SET-BUILD-NO              PIC 9(4) COMP-5
+                                             VALUE 9.
+
+       01 CUSTOMER-DATA-BLOCK.
+          03 CUSTOMER-C-CODE                 PIC X(5).
+          03 CUSTOMER-C-NAME                 PIC X(15).
+          03 CUSTOMER-C-ADDR1                PIC X(15).
+          03 CUSTOMER-C-ADDR2                PIC X(15).
+          03 CUSTOMER-C-ADDR3                PIC X(15).
+          03 CUSTOMER-C-ADDR4                PIC X(15).
+          03 CUSTOMER-C-LIMIT                PIC 9(4).
+          03 CUSTOMER-C-AREA                 PIC X.
+          03 CUSTOMER-GROUP-001.
+             04 CUSTOMER-GROUP-001-ITEM      OCCURS 10.
+                05 CUSTOMER-ORD-NO           PIC 9(6).
+                05 CUSTOMER-ORD-DATE         PIC 9(6).
+                05 CUSTOMER-ORD-VAL          PIC S9(4)V9(2).
+                05 CUSTOMER-PAY-VAL          PIC S9(4)V9(2).
+                05 CUSTOMER-ORD-BAL          PIC S9(4)V9(2).
+          03 CUSTOMER-C-BAL                  PIC S9(5)V9(2).
+          03 CUSTOMER-GROUP-002.
+             05 CUSTOMER-DEL-FLG             PIC 9.
+                88 CUSTOMER-DEL-FLG-TRUE     VALUE 1.
+             05 CUSTOMER-LOAD-FLG            PIC 9.
+                88 CUSTOMER-LOAD-FLG-TRUE    VALUE 1.
+             05 CUSTOMER-SAVE-FLG            PIC 9.
+                88 CUSTOMER-SAVE-FLG-TRUE    VALUE 1.
+             05 CUSTOMER-CLR-FLG             PIC 9.
+                88 CUSTOMER-CLR-FLG-TRUE     VALUE 1.
+             05 CUSTOMER-EXIT-FLG            PIC 9.
+                88 CUSTOMER-EXIT-FLG-TRUE    VALUE 1.
+          03 CUSTOMER-ERR-MSG                PIC X(80).
+          03 CUSTOMER-C-ORD-NO               PIC 9(6).
+          03 CUSTOMER-C-ORD-DT               PIC 9(6).
+          03 CUSTOMER-C-ORD-VL               PIC S9(4)V9(2).
+          03 CUSTOMER-C-PAY-VL               PIC S9(4)V9(2).
+          03 CUSTOMER-MAINHWIN               PIC x(4) COMP-5.
+          03 CUSTOMER-SUBCLASSFLG            PIC 9.
+             88 CUSTOMER-SUBCLASSFLG-TRUE    VALUE 1.
+          03 CUSTOMER-CONFIG-FLAG            PIC x(4) COMP-5.
+          03 CUSTOMER-CONFIG-VALUE           PIC x(4) COMP-5.
+          03 CUSTOMER-FUNCTION-DATA.
+             05 CUSTOMER-WINDOW-HANDLE       PIC x(4) COMP-5.
+             05 CUSTOMER-OBJECT-REFERENCE OBJECT REFERENCE.
+             05 CUSTOMER-CALL-FUNCTION       PIC X(30).
+             05 CUSTOMER-NUMERIC-VALUE       PIC x(4) COMP-5.
+             05 CUSTOMER-NUMERIC-VALUE2      PIC x(4) COMP-5.
+             05 CUSTOMER-SIZE-WIDTH          PIC x(4) COMP-5.
+             05 CUSTOMER-SIZE-HEIGHT         PIC x(4) COMP-5.
+             05 CUSTOMER-POSITION-X          PIC x(4) COMP-5.
+             05 CUSTOMER-POSITION-Y          PIC x(4) COMP-5.
+             05 CUSTOMER-IO-TEXT-BUFFER      PIC X(256).
+             05 CUSTOMER-IO-TEXT-BUFFER2     PIC X(256).
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 CUSTOMER-FIELD-NUMBERS.
+          03 CUSTOMER-FLD-NO-C-CODE          PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 CUSTOMER-FLD-NO-C-NAME          PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 CUSTOMER-FLD-NO-C-ADDR1         PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 CUSTOMER-FLD-NO-C-ADDR2         PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 CUSTOMER-FLD-NO-C-ADDR3         PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 CUSTOMER-FLD-NO-C-ADDR4         PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 CUSTOMER-FLD-NO-C-LIMIT         PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 CUSTOMER-FLD-NO-C-AREA          PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 CUSTOMER-FLD-NO-ORD-NO          PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 CUSTOMER-FLD-NO-ORD-DATE        PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 CUSTOMER-FLD-NO-ORD-VAL         PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 CUSTOMER-FLD-NO-PAY-VAL         PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 CUSTOMER-FLD-NO-ORD-BAL         PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 CUSTOMER-FLD-NO-C-BAL           PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 CUSTOMER-FLD-NO-DEL-FLG         PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 CUSTOMER-FLD-NO-LOAD-FLG        PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 CUSTOMER-FLD-NO-SAVE-FLG        PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 CUSTOMER-FLD-NO-CLR-FLG         PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 CUSTOMER-FLD-NO-EXIT-FLG        PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 CUSTOMER-FLD-NO-ERR-MSG         PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 CUSTOMER-FLD-NO-C-ORD-NO        PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 CUSTOMER-FLD-NO-C-ORD-DT        PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 CUSTOMER-FLD-NO-C-ORD-VL        PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 CUSTOMER-FLD-NO-C-PAY-VL        PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 CUSTOMER-FLD-NO-MAINHWIN        PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 CUSTOMER-FLD-NO-SUBCLASSFLG     PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 CUSTOMER-FLD-NO-CONFIG-FLAG     PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 CUSTOMER-FLD-NO-CONFIG-VALUE    PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 CUSTOMER-FLD-NO-WINDOW-HANDLE   PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 CUSTOMER-FLD-NO-OBJECT-REFEREN  PIC 9(4) COMP-5 VALUE
+                                               33.
+      * Field OBJECT-REFERENCE has been truncated
+          03 CUSTOMER-FLD-NO-CALL-FUNCTION   PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 CUSTOMER-FLD-NO-NUMERIC-VALUE   PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 CUSTOMER-FLD-NO-NUMERIC-VALUE2  PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 CUSTOMER-FLD-NO-SIZE-WIDTH      PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 CUSTOMER-FLD-NO-SIZE-HEIGHT     PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 CUSTOMER-FLD-NO-POSITION-X      PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 CUSTOMER-FLD-NO-POSITION-Y      PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 CUSTOMER-FLD-NO-IO-TEXT-BUFFER  PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 CUSTOMER-FLD-NO-IO-TEXT-BUFFER  PIC 9(4) COMP-5 VALUE
+                                               42.
+      * Field IO-TEXT-BUFFER2 has been truncated
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

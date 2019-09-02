@@ -1,0 +1,42 @@
+
+NetExpress Exception Handler - 16/11/2004  17:34:01
+C:\Program Files\Micro Focus\Net Express 4.0\Base\BIN\wexecwg.exe caused an exception at address : 0x00BB0678
+Exception type - EXCEPTION_ACCESS_VIOLATION on Read. Address 0x019E2A38
+
+Registers:
+
+	EAX 0012FD54	EBX 00953958
+	ECX 00000000	EDX 00BB21C0
+	DS  0023	ESI 019E2A40
+	ES  0023	EDI 00BB2220
+	FS  003B	GS  0000
+	CS  001B	EIP 00BB0678
+	SS  0023	ESP 0012FD30	EBP 00BB2324
+	Flags 00010212
+
+Error occurred in : TREE.gnt
+
+COBOL call stack:
+
+	TREE	(gnt program), loaded from C:\Program Files\Micro Focus\Net Express 4.0\Base\BIN\check.lbr
+	COBOL0GENERATE	(gnt program), loaded from C:\Program Files\Micro Focus\Net Express 4.0\Base\BIN\check.lbr
+	CHECKER	(gnt program), loaded from C:\Program Files\Micro Focus\Net Express 4.0\Base\BIN\check.lbr
+	COBCLI	(gnt program), loaded from C:\Program Files\Micro Focus\Net Express 4.0\Base\BIN\COBCLI.LBR
+	wexec	(obj program)
+
+Run-time : C:\Program Files\Micro Focus\Net Express 4.0\Base\BIN\cblrtss.dll, loaded at 0x600A0000
+
+	CompanyName Micro Focus International Limited
+	FileDescription Micro Focus 32-bit RTS
+	FileVersion 8.202, 5.179
+	LegalCopyright Copyright (C) 1984-2004 Micro Focus International Ltd.
+	OriginalFileName cblrtss.dll
+	ProductName Micro Focus Net Express
+	ProductVersion 4.0.38
+	SpecialBuild RTS Websync 4.0.006
+
+OS Information:
+
+Windows NT 5.1 (Build 2600: Service Pack 1)
+CPU: Intel , model unknown, 2 processors
+Available memory - 1039852 KB

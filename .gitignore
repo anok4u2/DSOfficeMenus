@@ -1,0 +1,11 @@
+## Ignore Net Express temporary files, build results
+
+# User-specific files
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
