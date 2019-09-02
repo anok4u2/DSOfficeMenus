@@ -6,3 +6,5 @@ Demo used the standard customer demo supplied with GUI Dialog.
 It uses custom draw of Windows Menus to add a gradient bar and icons.
 
 ![Screenshot](mdImages/custmenu.jpg)
+
+This is the NetExpress branch which works with Net Express V5.1 and possibly earlier versions.
